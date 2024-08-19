@@ -121,7 +121,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </td>
                 <?php
 
-                    $pegarDadosEmprestimo = \MySql::conectar()->prepare('SELECT * FROM `tb_emprestimos_equipamentos` WHERE ativo = ?');
+          $pegarDadosEmprestimo = \MySql::conectar()->prepare('SELECT * FROM `tb_emprestimos_equipamentos` WHERE ativo = ?');
           $pegarDadosEmprestimo->execute([$value['act']]);
           $todosAtivos = $pegarDadosEmprestimo->fetchAll();
 

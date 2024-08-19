@@ -86,7 +86,7 @@ class EmprestimoController
                 if ($conferirAtivo->rowCount() == 1) {
                     $updateEquipamento = \MySql::conectar()->prepare('UPDATE `tb_calibracao_equipamentos` SET id_status_emprestimo = ? WHERE act = ?');
                     $updateEquipamento->execute([1, $ativo]);
-
+                }
                     $loginEmail = \MySql::conectar()->prepare('SELECT * FROM login_equipamentos WHERE id = ?');
                     $loginEmail->execute([$_SESSION['id']]);
                     $todos = $loginEmail->fetchAll();
@@ -97,7 +97,7 @@ class EmprestimoController
                     }
 
                     \Models\EmprestimoModel::cadastrarEmprestimos($value2['nome'], $value2['email'], $equipamento, $ativo, $dataHoje, $data, $observacao, $nome, $email, $status);
-                }
+                
             }
             }
         }

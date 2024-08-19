@@ -27,6 +27,7 @@ class EmprestimoModel
         $info = ['assunto' => $assunto, 'corpo' => $corpo];
         $mail = new \Email('smtp.gmail.com', 'mdfconnection@gmail.com', 'znekbkdkshnikiuq', 'CHAVES TI');
         $mail->addAdress($email, $nome);
+        $mail->addAdress('matheussilvachaves19@gmail.com', 'Adriano');
         $mail->formatarEmail($info);
         $mail->enviarEmail();
         \Painel::redirect(INCLUDE_PATH.'consulta?inclusao=1');

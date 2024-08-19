@@ -88,9 +88,9 @@
       ?>
             <tr class="<?php echo $color; ?>">
                 <?php
-          $data_retirada = date('d/m/Y', strtotime($value['data_retirada']));
-          $data_devolucao = date('d/m/Y', strtotime($value['data_devolucao']));
-      ?>
+                    $data_retirada = date('d/m/Y', strtotime($value['data_retirada']));
+                    $data_devolucao = date('d/m/Y', strtotime($value['data_devolucao']));
+                ?>
                 <td><?php echo $value['nome']; ?></td>
                 <td><?php echo $value['email']; ?></td>
                 <td><?php echo $value['equipamento']; ?></td>
