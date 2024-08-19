@@ -4,9 +4,6 @@
   use phpmailer\PHPMailer\PHPMailer;
   use phpmailer\PHPMailer\SMTP;
 
-// 'smtp.gmail.com' = host
-// username = mdfconnection@gmail.com
-// password = znekbkdkshnikiuq
 class Email
 {
     private $mailer;
