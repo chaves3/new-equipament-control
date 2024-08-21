@@ -2,7 +2,7 @@
 
     async function mandarAtivo(idAtivo){
      
-        const dados = await fetch('teste.php?id='+idAtivo);
+        const dados = await fetch('fetch.php?id='+idAtivo);
         const resposta = await dados.json();
         console.log(resposta);
 
