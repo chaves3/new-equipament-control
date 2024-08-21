@@ -25,9 +25,9 @@ class EmprestimoModel
               <p>E-mail do solicitante: $email_solicitante</p>   
               ";
         $info = ['assunto' => $assunto, 'corpo' => $corpo];
-        $mail = new \Email('smtp.gmail.com', 'mdfconnection@gmail.com', 'znekbkdkshnikiuq', 'CHAVES TI');
+        $mail = new \Email('smtp.gmail.com', 'your_email', 'your_password', 'your_name');
         $mail->addAdress($email, $nome);
-        $mail->addAdress('matheussilvachaves19@gmail.com', 'Adriano');
+        $mail->addAdress('email_adress', 'name_adress');
         $mail->formatarEmail($info);
         $mail->enviarEmail();
         \Painel::redirect(INCLUDE_PATH.'consulta?inclusao=1');
